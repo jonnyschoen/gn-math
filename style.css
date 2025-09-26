@@ -1,125 +1,111 @@
-/* Custom properties for easy theme management */
+/* Basic Styles */
 :root {
-    --primary-color: #4A90E2; /* A modern blue */
-    --secondary-color: #9B51E0; /* A complimentary purple */
-    --text-color-light: #F4F4F4;
-    --text-color-dark: #1A1A1A;
-    --background-dark: #121212;
-    --background-gradient: linear-gradient(135deg, var(--background-dark), #1c1c1c);
-    --border-radius: 12px;
-}
-
-/* Basic resets and typography */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --link-color: #1a73e8;
+    --link-hover-bg: #e2eafc;
+    --border-color: #ccc;
+    --font-family: 'Lato', sans-serif;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    color: var(--text-color-light);
-    background: var(--background-gradient);
-    min-height: 100vh;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    min-height: 100vh;
 }
 
-/* Header and hero section styling */
-.hero {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.hero-content {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 30px 50px;
-    border-radius: var(--border-radius);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-}
-
-.site-title {
-    font-size: 4rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.site-tagline {
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* Game links list styling */
-.game-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.page-header, .game-container, .page-footer {
     width: 100%;
     max-width: 600px;
+    margin-bottom: 20px;
+}
+
+/* Header */
+.site-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.site-tagline, .site-status {
+    color: #666;
+    font-size: 1em;
+}
+
+.site-status {
+    font-style: italic;
+    margin-top: 15px;
+}
+
+/* Game Links */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .game-link {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: var(--border-radius);
+    padding: 15px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
     text-decoration: none;
-    color: var(--text-color-light);
-    transition: transform 0.3s ease, background 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+    text-align: left;
 }
 
 .game-link:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    background-color: var(--link-hover-bg);
+    border-color: var(--link-color);
+    transform: translateY(-2px);
 }
 
 .game-name {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.2em;
+    font-weight: 700;
     margin-bottom: 5px;
 }
 
 .game-description {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9em;
+    color: #666;
 }
 
-/* Footer styling */
-.site-footer {
-    margin-top: 40px;
+/* Footer */
+.page-footer {
+    margin-top: 20px;
 }
 
-.back-link {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.5);
+.home-link {
+    color: var(--link-color);
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-size: 0.9em;
+    transition: color 0.2s;
 }
 
-.back-link:hover {
-    color: var(--primary-color);
+.home-link:hover {
+    text-decoration: underline;
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 600px) {
+/* Responsive Design */
+@media (max-width: 480px) {
     .site-title {
-        font-size: 3rem;
+        font-size: 2em;
     }
 
-    .site-tagline {
-        font-size: 1rem;
+    .game-link {
+        padding: 12px 15px;
     }
 }
