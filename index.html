@@ -3,21 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gn-math</title>
+  <title>Gn-sci Games</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!--------------BASIC SITE HEADING----------------------->
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h2 class="logo">🎮 gn-sci</h2>
+    <button class="theme-toggle" id="themeToggle">🌙</button>
+  </nav>
+
+  <!-- HEADER -->
   <header>
     <h1>Welcome to <span class="highlight">gn-sci</span>!</h1>
     <h3>This site is under development. Stay tuned for updates and new games!</h3>
-    <p>                                                                         </p>
-    <p>To get back to this page when on a game, press the back arrow in your browser.
-      Some devices have a built-in back arrow, such as Chromebook</p>
+    <p class="note">
+      To get back to this page while on a game, press the back arrow in your browser.  
+      Some devices, like Chromebooks, have a built-in back button.
+    </p>
   </header>
-<!--------------------GAME LINKS--------------------------------->
+
+  <!-- SEARCH BAR -->
+  <input type="text" class="search-bar" placeholder="Search for a game..." id="searchInput">
+
+  <!-- GAME LIST -->
   <main>
-    <section class="game-list">
+    <section class="game-list" id="gameList">
       <a class="game-link" href="geodash/">Geometry Dash</a>
       <a class="game-link" href="templerun2/">Temple Run 2</a>
       <a class="game-link" href="spacewaves/">Space Waves</a>
@@ -29,11 +40,11 @@
       <a class="game-link" href="vex8/">Vex 8</a>
       <a class="game-link" href="undertale/">Undertale</a>
       <a class="game-link" href="balltrack/">Ball Track</a>
-      <a class="game-link" href="ninjaVSevil/">Ninva Vs. Evilcorp</a>
+      <a class="game-link" href="ninjaVSevil/">Ninja Vs. Evilcorp</a>
       <a class="game-link" href="paper.io/">Paper.io</a>
-      <a class="game-link" href="WHG/">Worlds Hardest Game</a>
-      <a class="game-link" href="WHG3/">Worlds Hardest Game 3</a>
-      <a class="game-link" href="titol/">This is the only level</a>
+      <a class="game-link" href="WHG/">World's Hardest Game</a>
+      <a class="game-link" href="WHG3/">World's Hardest Game 3</a>
+      <a class="game-link" href="titol/">This is the Only Level</a>
       <a class="game-link" href="tinyfishing/">Tiny Fishing</a>
       <a class="game-link" href="ttm/">Tomb of the Mask</a>
       <a class="game-link" href="stickman hook/">Stickman Hook</a>
@@ -43,9 +54,7 @@
   <footer>
     <p>&copy; 2025 gn-sci. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
-<!-- Reference link:
-<a class="game-link" href="/">  </a>
--->
