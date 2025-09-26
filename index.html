@@ -1,29 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gn-math</title>
-    <style>
-        body { font-family: sans-serif; text-align: center; }
-        .game-link {
-            display: block;
-            margin: 20px;
-            padding: 15px;
-            border: 1px solid black;
-            text-decoration: none;
-            color: black;
-            font-size: 1.2em;
-        }
-    </style>
+    <!-- Link to a modern font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Link to the CSS file for a cleaner structure -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to Gn-math! Still working on the website, it will become much better soon.</h1>
-    <a class="game-link" href="geodash/">Geometry Dash</a>
-    <a class="game-link" href="templerun2/">Temple Run 2 </a>
-    <!-- Add more links for each game you create -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="site-title">Gn-math</h1>
+            <p class="site-tagline">
+                Your portal to mind-bending challenges and classic games.
+                <br>
+                More is coming soon.
+            </p>
+        </div>
+    </header>
 
+    <main class="game-list">
+        <a class="game-link" href="geodash/">
+            <span class="game-name">Geometry Dash</span>
+            <span class="game-description">Jump and fly your way through a geometric world.</span>
+        </a>
+        <a class="game-link" href="templerun2/">
+            <span class="game-name">Temple Run 2</span>
+            <span class="game-description">Escape from the clutches of the evil temple demon!</span>
+        </a>
+        <!-- Add more game links here -->
+    </main>
 
-    <!-- back to main menu-->
-    <a href="../index.html">Back to Home Menu</a>
+    <footer class="site-footer">
+        <a href="../index.html" class="back-link">← Back to Main Menu</a>
+    </footer>
 </body>
 </html>
-
