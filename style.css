@@ -1,5 +1,5 @@
 /* -----------------------------
-   Global Reset & Base Styling
+   Global Styles
 ----------------------------- */
 * {
   margin: 0;
@@ -7,99 +7,173 @@
   box-sizing: border-box;
 }
 
-/* Base body styles (edit background, font, spacing here) */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #1f1c2c, #928dab); /* Gradient background */
+  background: linear-gradient(135deg, #1e1e2f, #383564);
   color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.light {
+  background: linear-gradient(135deg, #f4f4f9, #dcdcff);
+  color: #222;
 }
 
 /* -----------------------------
-   Header Styling
+   Navbar
+----------------------------- */
+.navbar {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
+
+/* -----------------------------
+   Theme Toggle
+----------------------------- */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.2s;
+}
+.theme-toggle:hover {
+  transform: scale(1.2);
+}
+body.light .theme-toggle {
+  color: #222;
+}
+
+/* -----------------------------
+   Header
 ----------------------------- */
 header {
   text-align: center;
-  margin-bottom: 40px;
+  max-width: 900px;
+  margin-bottom: 30px;
 }
 
-/* Main title */
 header h1 {
-  font-size: 3em;
+  font-size: 3rem;
   margin-bottom: 10px;
-  color: #ffffff;
 }
 
-/* Subtitle */
-header p {
-  font-size: 1.1em;
-  color: #d1d1d1;
+header h3 {
+  font-weight: normal;
+  color: #cccccc;
+  margin-bottom: 20px;
 }
 
-/* Highlighted word in title (you can change color here) */
+.note {
+  font-size: 1.1rem;
+  color: #bbbbbb;
+  line-height: 1.6;
+}
+
 .highlight {
   color: #ffd700;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
 }
 
 /* -----------------------------
-   Game List Section
+   Search Bar
 ----------------------------- */
+.search-bar {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin: 20px auto 30px;
+  display: block;
+  font-size: 1.1em;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  backdrop-filter: blur(8px);
+  transition: 0.3s;
+}
+.search-bar::placeholder {
+  color: #aaa;
+}
+.search-bar:focus {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+body.light .search-bar {
+  background: rgba(0, 0, 0, 0.05);
+  color: #222;
+}
 
-/* Layout for all the game buttons */
+/* -----------------------------
+   Game List
+----------------------------- */
 .game-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 20px;
   width: 100%;
   max-width: 1000px;
 }
 
-/* -----------------------------
-   Game Button Styling
------------------------------ */
-
-/* Style for game links as buttons */
 .game-link {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.08); /* Transparent glass effect */
-  border: 2px solid rgba(255, 255, 255, 0.2); /* Light border */
-  padding: 15px 25px;
-  border-radius: 12px;
+  display: block;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 14px;
   font-size: 1.2em;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 1px;
   color: #ffffff;
   text-align: center;
-  backdrop-filter: blur(10px); /* Glassmorphism */
+  text-decoration: none;
+  backdrop-filter: blur(12px);
   transition: all 0.3s ease;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
-
-/* Hover effect for buttons */
 .game-link:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 215, 0, 0.15);
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+  border-color: rgba(255, 215, 0, 0.4);
 }
-
-/* Optional: Click animation (button press feel) */
-.game-link:active {
-  transform: scale(0.96);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+body.light .game-link {
+  background: rgba(0, 0, 0, 0.05);
+  color: #000;
 }
 
 /* -----------------------------
-   Footer Styling
+   Footer
 ----------------------------- */
 footer {
-  margin-top: auto;
-  padding: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   text-align: center;
   font-size: 0.9em;
   color: #bbbbbb;
