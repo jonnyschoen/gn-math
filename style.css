@@ -1,13 +1,16 @@
-/* Reset and Base Styles */
+/* -----------------------------
+   Global Reset & Base Styling
+----------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Base body styles (edit background, font, spacing here) */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  background: linear-gradient(135deg, #1f1c2c, #928dab); /* Gradient background */
   color: #ffffff;
   min-height: 100vh;
   display: flex;
@@ -16,59 +19,84 @@ body {
   padding: 40px 20px;
 }
 
-/* Header */
+/* -----------------------------
+   Header Styling
+----------------------------- */
 header {
   text-align: center;
   margin-bottom: 40px;
 }
 
+/* Main title */
 header h1 {
   font-size: 3em;
   margin-bottom: 10px;
   color: #ffffff;
 }
 
+/* Subtitle */
 header p {
   font-size: 1.1em;
   color: #d1d1d1;
 }
 
+/* Highlighted word in title (you can change color here) */
 .highlight {
   color: #ffd700;
 }
 
-/* Game Links Section */
+/* -----------------------------
+   Game List Section
+----------------------------- */
+
+/* Layout for all the game buttons */
 .game-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
   gap: 20px;
   width: 100%;
   max-width: 1000px;
 }
 
+/* -----------------------------
+   Game Button Styling
+----------------------------- */
+
+/* Style for game links as buttons */
 .game-link {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 15px;
-  font-size: 1.3em;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.08); /* Transparent glass effect */
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Light border */
+  padding: 15px 25px;
+  border-radius: 12px;
+  font-size: 1.2em;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #ffffff;
   text-align: center;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px); /* Glassmorphism */
   transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
+/* Hover effect for buttons */
 .game-link:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
-/* Footer */
+/* Optional: Click animation (button press feel) */
+.game-link:active {
+  transform: scale(0.96);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* -----------------------------
+   Footer Styling
+----------------------------- */
 footer {
   margin-top: auto;
   padding: 20px;
