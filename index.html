@@ -7,53 +7,52 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h2 class="logo">🎮 gn-sci</h2>
+    <button class="theme-toggle" id="themeToggle">🌙</button>
+  </nav>
+
+  <!-- HEADER -->
   <header>
     <h1>Welcome to <span class="highlight">gn-sci</span>!</h1>
-    <p>This site is under development. Stay tuned for updates and new games!</p>
-    <p>To get back here from a game, press your browser’s back arrow.</p>
-
-    <div class="controls">
-      <input type="text" id="search" placeholder="Search games..." />
-      <button id="darkModeToggle">🌙 Toggle Dark Mode</button>
-    </div>
+    <h3>This site is under development. Stay tuned for updates and new games!</h3>
+    <p class="note">
+      To get back to this page while on a game, press the back arrow in your browser.  
+      Some devices, like Chromebooks, have a built-in back button.
+    </p>
   </header>
 
-  <main>
-    <!-- Favorites Section -->
-    <section id="favorites-section" class="favorites hidden">
-      <h2>⭐ Your Favorites</h2>
-      <div id="favorites-list" class="game-list"></div>
-    </section>
+  <!-- SEARCH BAR -->
+  <input type="text" class="search-bar" placeholder="Search for a game..." id="searchInput">
 
-    <!-- All Games Section -->
-    <section>
-      <h2>🎮 All Games</h2>
-      <div id="game-list" class="game-list">
-        <a class="game-link" href="geodash/">Geometry Dash</a>
-        <a class="game-link" href="templerun2/">Temple Run 2</a>
-        <a class="game-link" href="spacewaves/">Space Waves</a>
-        <a class="game-link" href="motosl/">Moto Spooky Land</a>
-        <a class="game-link" href="moto3/">Moto 3</a>
-        <a class="game-link" href="emulator/">Emulator</a>
-        <a class="game-link" href="cookieclicker/">Cookie Clicker</a>
-        <a class="game-link" href="fnf/">Friday Night Funkin</a>
-        <a class="game-link" href="vex8/">Vex 8</a>
-        <a class="game-link" href="undertale/">Undertale</a>
-        <a class="game-link" href="balltrack/">Ball Track</a>
-        <a class="game-link" href="ninjaVSevil/">Ninja Vs. Evilcorp</a>
-        <a class="game-link" href="paper.io/">Paper.io</a>
-        <a class="game-link" href="WHG/">World's Hardest Game</a>
-        <a class="game-link" href="WHG3/">World's Hardest Game 3</a>
-        <a class="game-link" href="titol/">This is the Only Level</a>
-        <a class="game-link" href="tinyfishing/">Tiny Fishing</a>
-        <a class="game-link" href="ttm/">Tomb of the Mask</a>
-        <a class="game-link" href="stickman hook/">Stickman Hook</a>
-      </div>
+  <!-- GAME LIST -->
+  <main>
+    <section class="game-list" id="gameList">
+      <a class="game-link" href="geodash/">Geometry Dash</a>
+      <a class="game-link" href="templerun2/">Temple Run 2</a>
+      <a class="game-link" href="spacewaves/">Space Waves</a>
+      <a class="game-link" href="motosl/">Moto Spooky Land</a>
+      <a class="game-link" href="moto3/">Moto 3</a>
+      <a class="game-link" href="emulator/">Emulator</a>
+      <a class="game-link" href="cookieclicker/">Cookie Clicker</a>
+      <a class="game-link" href="fnf/">Friday Night Funkin</a>
+      <a class="game-link" href="vex8/">Vex 8</a>
+      <a class="game-link" href="undertale/">Undertale</a>
+      <a class="game-link" href="balltrack/">Ball Track</a>
+      <a class="game-link" href="ninjaVSevil/">Ninja Vs. Evilcorp</a>
+      <a class="game-link" href="paper.io/">Paper.io</a>
+      <a class="game-link" href="WHG/">World's Hardest Game</a>
+      <a class="game-link" href="WHG3/">World's Hardest Game 3</a>
+      <a class="game-link" href="titol/">This is the Only Level</a>
+      <a class="game-link" href="tinyfishing/">Tiny Fishing</a>
+      <a class="game-link" href="ttm/">Tomb of the Mask</a>
+      <a class="game-link" href="stickman hook/">Stickman Hook</a>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 gn-sci. All rights reserved. Made with the help of ChatGPT</p>
+    <p>&copy; 2025 gn-sci. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
