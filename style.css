@@ -136,23 +136,7 @@ grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 gap: 20px;
 width: 100%;
 max-width: 1000px;
-}
-
-.game-list h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #ffd700;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-}
-
-/*----------------------------------
-   Top picks
-----------------------------------*/
-
-#top-picks .game-link {
-  background: rgba(255, 215, 0, 0.15);
-  border-color: rgba(255, 215, 0, 0.4);
+text-align: center;
 }
 
 .game-link {
