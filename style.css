@@ -97,6 +97,10 @@ header h3 {
   text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
 }
 
+p {
+   text-align: center;
+}
+
 /* -----------------------------
    Search Bar
 ----------------------------- */
@@ -136,6 +140,7 @@ body.light .search-bar {
   gap: 20px;
   width: 100%;
   max-width: 1000px;
+  text-align: center;
 }
 
 .game-link {
