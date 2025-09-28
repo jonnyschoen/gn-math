@@ -421,6 +421,54 @@
       }).catch(error => {
           console.error("Failed to merge files:", error);
       });
-  </script>      
+  </script>
+  
+       <script>
+  // WASD → Arrow key mapping
+  document.addEventListener("keydown", (e) => {
+    const map = {
+      w: "ArrowUp",
+      a: "ArrowLeft",
+      s: "ArrowDown",
+      d: "ArrowRight"
+    };
+    const key = e.key.toLowerCase();
+    if (map[key]) {
+      e.preventDefault();
+      const newEvt = new KeyboardEvent("keydown", {
+        key: map[key],
+        code: map[key],
+        keyCode: { ArrowUp: 38, ArrowDown: 40, ArrowLeft: 37, ArrowRight: 39 }[map[key]],
+        bubbles: true,
+        cancelable: true
+      });
+      const canvas = document.getElementById("canvas");
+      canvas && canvas.dispatchEvent(newEvt);
+    }
+  });
+
+  document.addEventListener("keyup", (e) => {
+    const map = {
+      w: "ArrowUp",
+      a: "ArrowLeft",
+      s: "ArrowDown",
+      d: "ArrowRight"
+    };
+    const key = e.key.toLowerCase();
+    if (map[key]) {
+      e.preventDefault();
+      const newEvt = new KeyboardEvent("keyup", {
+        key: map[key],
+        code: map[key],
+        keyCode: { ArrowUp: 38, ArrowDown: 40, ArrowLeft: 37, ArrowRight: 39 }[map[key]],
+        bubbles: true,
+        cancelable: true
+      });
+      const canvas = document.getElementById("canvas");
+      canvas && canvas.dispatchEvent(newEvt);
+    }
+  });
+</script>
+                                
   </body>
 </html>
