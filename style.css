@@ -130,7 +130,16 @@ color: #222;
 /* -----------------------------
   Game List and Top Picks
 ----------------------------- */
+/* NEW: Use flexbox on main to center the game list */
+main {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
 .game-list {
+/* Grid properties moved here to be a child of the flex container */
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 gap: 20px;
@@ -177,5 +186,4 @@ border-top: 1px solid rgba(255, 255, 255, 0.15);
 text-align: center;
 font-size: 0.9em;
 color: #bbbbbb;
-}
 }
