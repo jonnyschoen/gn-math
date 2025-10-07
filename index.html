@@ -38,6 +38,53 @@
   <!-- SEARCH BAR -->
   <input type="text" class="search-bar" placeholder="Search for a game..." id="searchInput">
 
+  <!-- Popup widget by NiftyButtons - Visit https://www.niftybuttons.com -->
+<div id="customPopupContainer" style="visibility: hidden; z-index: 1000; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                        <div id="popupCode" style="background-color: rgb(173, 216, 230); display: flex; border-radius: 10px; overflow: hidden; height: 325px; width: 100%; max-width: 600px; margin: 0px auto; position: relative; align-items: stretch; box-shadow: rgba(0, 0, 0, 0.2) 3px 3px 10px;"><div style="width: 216px; height: 100%; flex-shrink: 0; background-image: url(&quot;https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?w=1800&amp;t=st=1702864347~exp=1702864947~hmac=0077d83042881782369ea73c0c73cd021888f2c2f06b3b493d0085d2e7874c49&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;"></div><div style="flex: 1 1 0%; padding: 30px; text-align: center; display: flex; flex-direction: column; justify-content: center;"><div style="
+                font-size: 14px !important;
+                color: #333333 !important;
+                font-family: Verdana !important;
+                margin-bottom: 10px !important;
+                display: block !important;
+            ">gn-sci</div><h2 style="
+            font-size: 30px !important;
+            font-family: Verdana !important;
+            color: #000000 !important;
+            margin-bottom: 15px !important;
+            margin-top: 0 !important;
+            font-weight: bold !important;
+            display: block !important;
+        ">Switching URLs</h2><div style="
+            font-size: 16px !important;
+            font-family: Verdana !important;
+            color: #333333 !important;
+            line-height: 1.6 !important;
+            margin-bottom: 20px !important;
+            margin-top: 10px !important;
+            display: block !important;
+        ">gn-sci will be switching URLs from jumpernull.github.io/gn-sci to gn-sci.work.gd on November 1st. Please bookmark or make changes accordingly.</div></div></div>
+                    </div>
+             <script>
+        setTimeout(function() {
+            // Your existing code for showing the popup here
+            const popupContainer = document.getElementById('customPopupContainer');
+            popupContainer.style.visibility = 'visible';
+            addCloseButton(popupContainer);
+        }, 2 * 1000);
+
+        // Function to add a close button
+        function addCloseButton(popupContainer) {
+            const closeButton = document.createElement('span');
+            closeButton.style.cssText = " position: absolute; top: 2px; right: 6px; cursor: pointer; z-index: 1001; font-size: 20px; color: black;";
+            closeButton.innerText = 'x';
+            closeButton.onclick = () => {
+                popupContainer.style.display = 'none';
+            };
+            popupContainer.appendChild(closeButton);
+        }
+        </script>
+  
+  
   <!-- GAME LIST -->
   <main>
 
